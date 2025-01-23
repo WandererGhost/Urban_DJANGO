@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task2.views import main_page, func_view, class_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', main_page),
+    path('func/', func_view),
+    path('class/', class_view.as_view()),
 ]
