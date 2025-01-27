@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+
+<title>{% block title %}Оформление заказа{% endblock %}</title>
+
+<body>
+<header>
+    {% block pagename %}
+    <h2>Оформление заказа</h2>
+    {% endblock %}
+</header>
+<menu>
+    {% block menu %}
+    {{block.super}}
+    {% endblock %}
+</menu>
+<main>
+    {% block content%}
+    <p>В зависимости от сложности заказа и загруженности офиса сроки изготовления могут меняться</p>
+    <p>Поэтому в ближайшее время с Вами <strong>свяжется наш менеджер</strong> для согласования всех деталей</p>
+    <ul>
+        {% for service in services %}
+            <li>{{ service }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Если Вам пока тяжело определиться с заказом, можете оставить заявку на звонок</p>
+    <p>Наш менеджер в ближаейшее время с Вами свяжется</p>
+    <p><button>Перезвоните мне</button></p><br>
+    {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+    {{block.super}}
+    {% endblock %}
+</footer>
+</body>

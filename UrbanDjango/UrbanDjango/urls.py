@@ -19,13 +19,20 @@ from django.urls import path
 from task2.views import main_page, func_page, class_page
 from django.views.generic import TemplateView
 from task3.views import order, get_contact
+from task4.views import order_task4, get_contact_task4
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_page),
     path('func/', func_page),
     path('class/', class_page.as_view()),
+
     path('print_studio/', TemplateView.as_view(template_name='main_page_task3.html')),
     path('order/', order),
     path('contacts/', get_contact),
+
+    path('print_studio_task4/', TemplateView.as_view(template_name='main_page_task4.html')),
+    path('order_4/', order_task4),
+    path('contacts_4/', get_contact_task4)
+
 ]

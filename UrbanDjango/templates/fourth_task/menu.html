@@ -1,0 +1,41 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{%  endblock %}</title>
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
+</head>
+<body>
+    <header>
+        {% block pagename %}
+        <h1>Pagename - название стринцы</h1>
+        {% endblock %}
+    </header>
+    <menu>
+        {% block menu %}
+        <br>
+        <br>
+        <a href="/print_studio_task4">Главная страница</a><br>
+        <a href="/order_4">Сделать заказ</a><br>
+        <a href="/contacts_4">Контакты</a><br>
+        <br>
+        <br>
+        {% endblock %}
+    </menu>
+    <main>
+        {% block content %}
+        <p>Блок для контента</p>
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        <br>
+        <br>
+        <br>
+        <p>2025 URBAN | Разработчик Python</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>
