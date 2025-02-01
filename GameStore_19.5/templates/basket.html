@@ -1,0 +1,23 @@
+{% extends 'menu.html' %}
+<title>{% block title %}Контакты{% endblock %}</title>
+<header>
+    {% block pagename %}
+    <h1>Корзина покупок</h1>
+    {% endblock %}
+</header>
+<menu>
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+</menu>
+<main>
+    {% block content %}
+    <h2>Извините, но Ваша корзина пуста</h2>
+    {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+    {{block.super}}
+    {% endblock %}
+</footer>
+
