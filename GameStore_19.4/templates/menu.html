@@ -1,0 +1,39 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PRINT{%  endblock %}</title>
+    <link rel="stylesheet" type="text/css" href='{% static "style.css" %}'>
+</head>
+<body>
+    <header>
+        {% block signin %}
+        <p><a href="/sign_in">Регистрация</a></p>
+        {% endblock %}
+        {% block pagename %}
+        <h1>Название</h1>
+        {% endblock %}
+    </header>
+    <menu>
+        {% block menu %}
+            <a href="/">Главная страница</a><br>
+            <a href="/order">Магазин</a><br>
+            <a href="/basket">Корзина</a><br>
+        {% endblock %}
+    </menu>
+    <main>
+        {% block content %}
+        <p>Блок для контента</p>
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        <br>
+        <br>
+        <p>2025 URBAN | Разработчик Python | Татьяна Харина</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>
